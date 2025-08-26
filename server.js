@@ -124,7 +124,7 @@ async function sendSingleMessage(username, message) {
         log(`Sending message to ${username}`);
 
         // Search for user
-        const searchSelector = '.input-search input';
+        const searchSelector = 'input[placeholder="Search"]';
         if (!(await waitForElement(searchSelector))) {
             throw new Error('Search input not found');
         }
